@@ -1,21 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Leonor Quispe Gonzales</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Leonor Quispe González — Perfil</title>
+  <meta name="description" content="Leonor Quispe González — Ingeniera Civil. Trayectoria, Plan, Proyectos y Reconocimientos.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-
 <body>
 
-<!-- NAV -->
-<header class="navbar">
-  <div class="nav-container">
-    <div class="logo">Leonor Quispe</div>
+<header>
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="logo">AS</div>
+      <div style="color:#fff;font-weight:600">Alianza Social • Leonor Quispe</div>
+    </div>
     <nav>
       <a href="#home">Inicio</a>
       <a href="#perfil">Perfil</a>
@@ -27,110 +27,302 @@
   </div>
 </header>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Ingeniería con experiencia,<br>gestión con liderazgo</h1>
-    <p>30 años construyendo infraestructura y desarrollo para Potosí</p>
-  </div>
-  <div class="hero-image">
-    <img src="assets/images/asset1.webp" alt="Leonor Quispe">
-  </div>
-</section>
+<main class="wrap">
 
-<!-- PERFIL -->
-<section id="perfil" class="section light">
-  <h2>Perfil Profesional</h2>
-  <p class="section-text">
-    Ingeniera Civil con amplia trayectoria en dirección, supervisión y fiscalización de obras públicas y privadas.
-    Especialista en gestión de proyectos urbanos, infraestructura educativa, hospitalaria, vial y productiva,
-    liderando equipos técnicos multidisciplinarios.
-  </p>
-</section>
-
-<!-- TRAYECTORIA -->
-<section id="trayectoria" class="section green">
-  <h2>Trayectoria Destacada</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Gestión Pública</h3>
-      <p>Dirección y fiscalización de obras en el Gobierno Municipal de Potosí y FPS.</p>
+  <!-- HERO -->
+  <section id="home" class="hero" aria-labelledby="hero-title">
+    <div class="hero-left">
+      <div class="kicker">Ingeniera Civil • Gestión Técnica</div>
+      <h1 id="hero-title">Experiencia que construye resultados para Potosí</h1>
+      <p>Ingeniera Civil con más de <strong>30 años</strong> liderando proyectos de infraestructura: educativas, hospitalarias, viales, productivas y comunitarias. Profesional con trayectoria pública y privada.</p>
+      <div class="hero-cta">
+        <button class="btn btn-light" onclick="document.getElementById('proyectos').scrollIntoView({behavior:'smooth'})">Ver proyectos</button>
+        <button class="btn btn-accent" onclick="document.getElementById('reconocimientos').scrollIntoView({behavior:'smooth'})">Ver reconocimientos</button>
+      </div>
     </div>
-    <div class="card">
-      <h3>Sector Privado</h3>
-      <p>Gerente General y Gerente Técnica en empresas constructoras.</p>
+
+    <div class="hero-right">
+      <div class="hero-shape"></div>
+      <div class="hero-shape-2"></div>
+      <div class="profile-card" role="region" aria-label="Ficha de Leonor Quispe">
+        <div class="profile-avatar" id="profileAvatar"><img src="assets/images/asset1.webp" alt="Foto de Leonor"></div>
+        <div class="profile-name">Leonor Estela Quispe Gonzales</div>
+        <div class="profile-sub">Ing. Civil — Carnet 3693902Pt</div>
+        <div class="badges" aria-hidden="false">
+          <div class="badge">+30 años</div>
+          <div class="badge">Liderazgo</div>
+          <div class="badge">Transparencia</div>
+        </div>
+      </div>
     </div>
-    <div class="card">
-      <h3>Liderazgo Institucional</h3>
-      <p>Presidenta y Vicepresidenta en instituciones nacionales de ingeniería.</p>
+  </section>
+
+  <!-- PERFIL -->
+  <section id="perfil" class="section">
+    <div class="section-head">
+      <h2>Perfil profesional</h2>
+      <div class="muted">Dirección • Supervisión • Fiscalización</div>
     </div>
-  </div>
-</section>
 
-<!-- PROYECTOS -->
-<section id="proyectos" class="section light">
-  <h2>Áreas de Proyecto</h2>
-  <div class="grid-3">
-    <div class="box">Infraestructura Educativa</div>
-    <div class="box">Infraestructura Hospitalaria</div>
-    <div class="box">Vías y Transporte</div>
-    <div class="box">Infraestructura Productiva</div>
-    <div class="box">Espacios Deportivos</div>
-    <div class="box">Saneamiento Básico</div>
-  </div>
-</section>
+    <div class="perfil-grid">
+      <div class="perfil-card">
+        <p class="perfil-bio">
+          Ingeniera Civil con 30 años de experiencia en construcción y gestión de proyectos en el sector público y privado.
+          Especializada en dirección, supervisión y fiscalización de obras: edificaciones educacionales, hospitalarias, vías, saneamiento, infraestructura deportiva y comunitaria.
+        </p>
 
-<!-- RECONOCIMIENTOS -->
-<section id="reconocimientos" class="section green">
-  <h2>Reconocimientos</h2>
-  <div class="cards icons">
-    <div class="card icon-card">Trayectoria Profesional</div>
-    <div class="card icon-card">Liderazgo Institucional</div>
-    <div class="card icon-card">Aporte al Desarrollo</div>
-    <div class="card icon-card">Gestión Pública Destacada</div>
-  </div>
-</section>
+        <div style="margin-top:12px">
+          <span class="pill">Compromiso</span>
+          <span class="pill">Proyectos</span>
+          <span class="pill">Transparencia</span>
+        </div>
+      </div>
 
-<!-- GALERÍA -->
-<section id="galeria" class="section light">
-  <h2>Galería</h2>
-  <div class="gallery">
-    <!-- 28 imágenes -->
-    <!-- solo duplicar líneas -->
-    <img src="assets/images/asset1.webp">
-    <img src="assets/images/asset2.webp">
-    <img src="assets/images/asset3.webp">
-    <img src="assets/images/asset4.webp">
-    <img src="assets/images/asset5.webp">
-    <img src="assets/images/asset6.webp">
-    <img src="assets/images/asset7.webp">
-    <img src="assets/images/asset8.webp">
-    <img src="assets/images/asset9.webp">
-    <img src="assets/images/asset10.webp">
-    <img src="assets/images/asset11.webp">
-    <img src="assets/images/asset12.webp">
-    <img src="assets/images/asset13.webp">
-    <img src="assets/images/asset14.webp">
-    <img src="assets/images/asset15.webp">
-    <img src="assets/images/asset16.webp">
-    <img src="assets/images/asset17.webp">
-    <img src="assets/images/asset18.webp">
-    <img src="assets/images/asset19.webp">
-    <img src="assets/images/asset20.webp">
-    <img src="assets/images/asset21.webp">
-    <img src="assets/images/asset22.webp">
-    <img src="assets/images/asset23.webp">
-    <img src="assets/images/asset24.webp">
-    <img src="assets/images/asset25.webp">
-    <img src="assets/images/asset26.webp">
-    <img src="assets/images/asset27.webp">
-    <img src="assets/images/asset28.webp">
-  </div>
-</section>
+      <div>
+        <div style="margin-bottom:14px">
+          <h3 style="margin:0 0 8px">Datos clave</h3>
+          <div class="perfil-card" style="padding:12px">
+            <strong>Profesión:</strong> Ing. Civil<br>
+            <strong>Carnet:</strong> 3693902Pt<br>
+            <strong>Roles:</strong> Gestión pública y privada
+          </div>
+        </div>
 
-<footer class="footer">
-  © 2025 Leonor Quispe Gonzales
+        <div>
+          <h3 style="margin-bottom:8px">Fotos</h3>
+          <div class="gallery" aria-label="Galería pequeñas">
+            <img src="assets/images/asset2.webp" alt="foto2" onclick="openModal(this.src)">
+            <img src="assets/images/asset3.webp" alt="foto3" onclick="openModal(this.src)">
+            <img src="assets/images/asset4.webp" alt="foto4" onclick="openModal(this.src)">
+            <img src="assets/images/asset5.webp" alt="foto5" onclick="openModal(this.src)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAYECTORIA -->
+  <section id="trayectoria" class="section">
+    <div class="section-head">
+      <h2>Trayectoria profesional (cargos jerárquicos)</h2>
+      <div class="muted">Experiencia en cargos de dirección y gerencia</div>
+    </div>
+
+    <div class="timeline" role="list">
+      <div class="timeline-item" role="listitem">
+        <div class="timeline-icon">01</div>
+        <div class="timeline-content">
+          <h4>Jefe Departamento Proyectos Urbanos y Ambientales — Hon. Gobierno Municipal de Potosí</h4>
+          <p>19 de junio de 2000 – 21 de diciembre de 2000</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">02</div>
+        <div class="timeline-content">
+          <h4>Jefe Departamento Supervisión y Fiscalización de Obras — Hon. Gobierno Municipal de Potosí</h4>
+          <p>15 de enero de 2009 – 20 de junio de 2015</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">03</div>
+        <div class="timeline-content">
+          <h4>Gerente General — Constructora y Consultora CEJALOR SRL</h4>
+          <p>27 de agosto de 2015 – 6 de junio de 2018</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">04</div>
+        <div class="timeline-content">
+          <h4>Coordinadora — Programa de Infraestructura Urbana (FPS Potosí)</h4>
+          <p>14 de agosto de 2017 – 22 de diciembre de 2017</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">05</div>
+        <div class="timeline-content">
+          <h4>Secretaria de Desarrollo Territorial y Medio Ambiente — GAM Potosí</h4>
+          <p>14 de septiembre de 2023 – 5 de febrero de 2024</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">06</div>
+        <div class="timeline-content">
+          <h4>Presidenta de Directorio — Empresa Municipal \"Fábrica de Joyas\"</h4>
+          <p>24 de noviembre de 2023 – 5 de febrero de 2024</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-icon">07</div>
+        <div class="timeline-content">
+          <h4>Gerente Técnico — Empresa Constructora PREMEZCON</h4>
+          <p>12 de febrero de 2024 – Actualidad</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:14px"></div>
+
+    <h3 style="margin-top:18px">Cargos institucionales</h3>
+    <div class="institucional" aria-label="Cargos institucionales">
+      <div class="inst-item"><strong>Vicepresidente</strong> — Colegio de Ingenieros Civiles de Bolivia (Dept. Potosí) 2011–2013</div>
+      <div class="inst-item"><strong>Vicepresidente</strong> — Colegio de Ingenieros Civiles (Potosí) 2013–2015</div>
+      <div class="inst-item"><strong>Secretaria General</strong> — Sociedad de Ingenieros de Bolivia (Potosí) 2016–2018</div>
+      <div class="inst-item"><strong>Presidenta</strong> — Sociedad de Ingenieros de Bolivia (Potosí) 2018–2020</div>
+      <div class="inst-item"><strong>Miembro Comité Técnico</strong> — Fiscalización, SIB Potosí</div>
+      <div class="inst-item"><strong>Miembro Comité Técnico</strong> — Urbanismo y Vivienda, SIB Potosí</div>
+      <div class="inst-item"><strong>Vicepresidente</strong> — Colegio de Ingenieros Civiles de Bolivia (Gestión 2024–2026)</div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS (resumen) -->
+  <section id="proyectos" class="section">
+    <div class="section-head">
+      <h2>Proyectos destacados</h2>
+      <div class="muted">Selección representativa</div>
+    </div>
+
+    <div class="grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
+      <div class="perfil-card"><h4>Mejoramiento vial - Barrio Centro</h4><p class="muted">Diseño y supervisión • 2018</p></div>
+      <div class="perfil-card"><h4>Saneamiento sector Norte</h4><p class="muted">Plan ejecutivo • 2019</p></div>
+      <div class="perfil-card"><h4>Renovación Plaza X</h4><p class="muted">Rehabilitación y accesibilidad • 2020</p></div>
+      <div class="perfil-card"><h4>Sistema peatonal - Sector Y</h4><p class="muted">Diseño seguro • 2016</p></div>
+      <div class="perfil-card"><h4>Mejoras en iluminación</h4><p class="muted">Modernización alumbrado • 2015</p></div>
+      <div class="perfil-card"><h4>Plan de drenaje - Zona Sur</h4><p class="muted">Estudio y supervisión • 2017</p></div>
+    </div>
+  </section>
+
+  <!-- RECONOCIMIENTOS (detallados, numerados) -->
+  <section id="reconocimientos" class="section">
+    <div class="section-head">
+      <h2>Reconocimientos y Distinciones</h2>
+      <div class="muted">Lista completa (selección cronológica y por institución)</div>
+    </div>
+
+    <div class="recs-grid" role="list">
+      <!-- We'll include all recognitions you provided, numbered -->
+      <div class="rec-card"><div class="rec-number">#1</div><h4>Reconocimiento otorgado por la Sociedad de Ingenieros de Bolivia departamental Potosí por el trabajo realizado como Secretaria General dentro del directorio SIB Potosí (gestión 2016–2018).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#2</div><h4>Reconocimiento a los 15 años de Ejercicio Profesional otorgado por la Sociedad de Ingenieros de Bolivia departamental Potosí (octubre 2016).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#3</div><h4>Reconocimiento otorgado por la Sociedad de Ingenieros de Bolivia departamental Oruro por la trayectoria profesional (mayo 2019).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#4</div><h4>Reconocimiento otorgado por el Colegio de Ingenieros de Sistemas, Telecomunicaciones Redes e Informática Potosí (CISTRIP) por el apoyo al fortalecimiento de su institución (24 de agosto de 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#5</div><h4>Reconocimiento otorgado por la Sociedad de Ingenieros de Bolivia departamental Potosí por el aporte dentro de los comités técnicos (5 de octubre de 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#6</div><h4>Reconocimiento otorgado por la Sociedad de Ingenieros de Bolivia departamental Potosí por el invaluable apoyo y trabajo en el proyecto Ampliación Edificio SIB Potosí (octubre 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#7</div><h4>Distinción otorgada por la Sociedad de Ingenieros de Bolivia por la destacada gestión como Presidenta de la SIB departamental Potosí (gestión 2018–2020) (23 de octubre de 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#8</div><h4>Reconocimiento otorgado por la Sociedad de Ingenieros de Bolivia departamental Potosí por el aporte dentro de los comités técnicos (5 de octubre de 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#9</div><h4>Reconocimiento otorgado por la Sociedad de Ingenieros de Bolivia departamental Potosí por el invaluable apoyo y trabajo en el proyecto Ampliación Edificio SIB Potosí (octubre 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#10</div><h4>Reconocimiento otorgado por el Colegio de Ingenieros Ambientales Potosí (CIAP) por el apoyo al fortalecimiento de su institución (23 de octubre de 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#11</div><h4>Reconocimiento otorgado por la Sociedad de Ingenieros de Bolivia departamental Chuquisaca por el compromiso, esfuerzo y constante dedicación (23 de octubre de 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#12</div><h4>Reconocimiento otorgado por la Sociedad de Ingenieros de Bolivia departamental Oruro por la labor desempeñada como Presidenta del SIB Potosí (23 de octubre de 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#13</div><h4>Reconocimiento otorgado por la Federación de Profesionales de Chuquisaca por la labor realizada como Presidenta de la SIB Potosí (23 de octubre de 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#14</div><h4>Reconocimiento otorgado por las socias ingenieras de la Sociedad de Ingenieros de Bolivia departamental Potosí por el trabajo en pro del desarrollo de la institución (23 de octubre de 2020).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#15</div><h4>Reconocimiento a los 20 años de Ejercicio Profesional otorgado por la Sociedad de Ingenieros de Bolivia departamental Potosí (5 de octubre de 2021).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#16</div><h4>Distinción al Ejercicio Profesional de la Mujer en la Ingeniería — distinción departamental Potosí (23 de junio de 2023).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#17</div><h4>Reconocimiento y felicitación por coordinar el proyecto "Navidad por Amor a mi Ciudad" — Gobierno Autónomo Municipal de Potosí (25 de diciembre de 2023).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#18</div><h4>Reconocimiento al Ejercicio Profesional e institucional realizado por la Cámara de Diputados — Asamblea Legislativa (18 de mayo de 2024).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#19</div><h4>Reconocimiento por aporte al desarrollo institucional — Sociedad de Ingenieros de Bolivia (20 de julio de 2024).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#20</div><h4>Distinción "Huésped Grato" de la ciudad de Sucre — Hon. Concejo Municipal de Sucre (7 de marzo de 2025).</h4></div>
+
+      <div class="rec-card"><div class="rec-number">#21</div><h4>Reconocimiento — Colegio de Ingenieros Civiles de Chuquisaca por organización del Tercer Encuentro Nacional de Ingenieras (8 de marzo de 2025).</h4></div>
+
+      <!-- if you have more, add more rec-card blocks -->
+    </div>
+  </section>
+
+  <!-- GALERÍA completa -->
+  <section id="galeria" class="section">
+    <div class="section-head"><h2>Galería</h2><div class="muted">28 imágenes</div></div>
+    <div class="gallery" role="list">
+      <img src="assets/images/asset1.webp" alt="asset1" onclick="openModal(this.src)">
+      <img src="assets/images/asset2.webp" alt="asset2" onclick="openModal(this.src)">
+      <img src="assets/images/asset3.webp" alt="asset3" onclick="openModal(this.src)">
+      <img src="assets/images/asset4.webp" alt="asset4" onclick="openModal(this.src)">
+      <img src="assets/images/asset5.webp" alt="asset5" onclick="openModal(this.src)">
+      <img src="assets/images/asset6.webp" alt="asset6" onclick="openModal(this.src)">
+      <img src="assets/images/asset7.webp" alt="asset7" onclick="openModal(this.src)">
+      <img src="assets/images/asset8.webp" alt="asset8" onclick="openModal(this.src)">
+      <img src="assets/images/asset9.webp" alt="asset9" onclick="openModal(this.src)">
+      <img src="assets/images/asset10.webp" alt="asset10" onclick="openModal(this.src)">
+      <img src="assets/images/asset11.webp" alt="asset11" onclick="openModal(this.src)">
+      <img src="assets/images/asset12.webp" alt="asset12" onclick="openModal(this.src)">
+      <img src="assets/images/asset13.webp" alt="asset13" onclick="openModal(this.src)">
+      <img src="assets/images/asset14.webp" alt="asset14" onclick="openModal(this.src)">
+      <img src="assets/images/asset15.webp" alt="asset15" onclick="openModal(this.src)">
+      <img src="assets/images/asset16.webp" alt="asset16" onclick="openModal(this.src)">
+      <img src="assets/images/asset17.webp" alt="asset17" onclick="openModal(this.src)">
+      <img src="assets/images/asset18.webp" alt="asset18" onclick="openModal(this.src)">
+      <img src="assets/images/asset19.webp" alt="asset19" onclick="openModal(this.src)">
+      <img src="assets/images/asset20.webp" alt="asset20" onclick="openModal(this.src)">
+      <img src="assets/images/asset21.webp" alt="asset21" onclick="openModal(this.src)">
+      <img src="assets/images/asset22.webp" alt="asset22" onclick="openModal(this.src)">
+      <img src="assets/images/asset23.webp" alt="asset23" onclick="openModal(this.src)">
+      <img src="assets/images/asset24.webp" alt="asset24" onclick="openModal(this.src)">
+      <img src="assets/images/asset25.webp" alt="asset25" onclick="openModal(this.src)">
+      <img src="assets/images/asset26.webp" alt="asset26" onclick="openModal(this.src)">
+      <img src="assets/images/asset27.webp" alt="asset27" onclick="openModal(this.src)">
+      <img src="assets/images/asset28.webp" alt="asset28" onclick="openModal(this.src)">
+    </div>
+  </section>
+
+</main>
+
+<!-- Modal -->
+<div id="modal" class="modal" role="dialog" aria-hidden="true" onclick="closeModal()">
+  <img id="modalImg" src="" alt="Imagen ampliada">
+</div>
+
+<footer style="background:linear-gradient(90deg,var(--green),var(--green-2));color:#fff;padding:18px;text-align:center">
+  © 2025 Leonor Estela Quispe Gonzales — Información pública
 </footer>
+
+<script>
+  function openModal(src){
+    const m = document.getElementById('modal');
+    const img = document.getElementById('modalImg');
+    img.src = src;
+    m.classList.add('open');
+    m.style.display = 'flex';
+    m.setAttribute('aria-hidden','false');
+  }
+  function closeModal(){
+    const m = document.getElementById('modal');
+    m.classList.remove('open');
+    m.style.display = 'none';
+    m.setAttribute('aria-hidden','true');
+    document.getElementById('modalImg').src = '';
+  }
+  // smooth nav
+  document.querySelectorAll('nav a').forEach(a=>{
+    a.addEventListener('click', e=>{
+      e.preventDefault();
+      const t=document.querySelector(a.getAttribute('href'));
+      if(t)t.scrollIntoView({behavior:'smooth',block:'start'});
+    })
+  })
+</script>
 
 </body>
 </html>
