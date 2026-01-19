@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Leonor Quispe González — Perfil</title>
+  <meta name="description" content="Leonor Quispe González — Ingeniera Civil. Trayectoria, Plan, Proyectos y Reconocimientos.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --green:#0F6B3F;   /* color primario */
+      --green-acc:#16A34A;
+      --dark:#111111;
+      --muted:#6b6b6b;
+      --bg:#ffffff;
+      --card:#fbfbfb;
+      --radius:12px;
+      --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:Inter,system-ui,Arial, sans-serif;
+      margin:0;
+      background:var(--bg);
+      color:var(--dark);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    header{
+      border-bottom:1px solid #eee;
+      background:linear-gradient(0deg,rgba(255,255,255,0.85),rgba(255,255,255,0.85));
+      position:sticky;
+      top:0;
+      z-index:40;
+      backdrop-filter: blur(4px);
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:20px;}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .logo{
+      width:46px;height:46px;border-radius:8px;background:var(--green);
+      display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700;
+      box-shadow: 0 6px 20px rgba(15,107,63,0.12);
+    }
+    nav a{color:var(--muted);text-decoration:none;margin-left:12px;font-weight:600}
+    nav a:hover{color:var(--dark)}
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;padding:48px 0;}
+    .hero .intro h1{font-size:28px;margin:0 0 8px}
+    .hero .intro p{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-block;background:var(--green);color:white;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600;box-shadow:0 8px 18px rgba(15,107,63,0.12)}
+    .profile-card{
+      background:linear-gradient(180deg,#fff, var(--card));
+      border-radius:14px;padding:18px;box-shadow:0 10px 30px rgba(15,107,63,0.06);
+      text-align:center;
+    }
+    .profile-card img{width:100%;height:360px;object-fit:cover;border-radius:10px}
+    .profile-card h3{margin:12px 0 6px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .tag{background:rgba(15,107,63,0.08);color:var(--green);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+    /* sections */
+    section{padding:48px 0;border-top:1px solid #f2f2f2}
+    .grid{display:grid;gap:20px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .card{background:white;border-radius:12px;padding:18px;box-shadow:0 8px 24px rgba(12,12,12,0.04);}
+    h2.section-title{display:flex;align-items:center;gap:12px;margin:0 0 18px}
+    h2.section-title span.dot{width:12px;height:12px;background:var(--green);border-radius:50%}
+    /* galleries */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    /* mini-cards (Plan / Proyecto / Reconocimientos) */
+    .mini{display:flex;flex-direction:column;gap:10px}
+    .mini .mini-head{display:flex;align-items:center;gap:12px}
+    .mini .mini-head .tag-mini{width:44px;height:44px;border-radius:8px;background:var(--green);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    .mini p.lead{margin:0;color:var(--muted)}
+    .details{margin-top:8px;color:var(--muted);font-size:14px}
+    .toggle-btn{display:inline-block;margin-top:12px;color:var(--green);cursor:pointer;font-weight:700}
+    .hidden{display:none}
+    /* footer */
+    footer{padding:28px 0;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid #f6f6f6}
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr; padding:30px 0}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .grid.cols-3{grid-template-columns:1fr}
+      .grid.cols-2{grid-template-columns:1fr}
+      .profile-card img{height:260px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav>
+        <div class="brand">
+          <div class="logo">AS</div>
+          <div>
+            <strong>Alianza Social</strong><br><small style="color:var(--muted)">Leonor Quispe González</small>
+          </div>
+        </div>
+        <div>
+          <a href="#home">Home</a>
+          <a href="#plan">Plan</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#reconocimientos">Reconocimientos</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="intro">
+        <h1>Leonor Quispe González</h1>
+        <p>Ingeniera Civil con más de 30 años de experiencia en proyectos de infraestructura, gestión técnica y liderazgo gremial — primera mujer presidenta del Colegio de Ingenieros de Potosí.</p>
+        <a href="#plan" class="cta">Ver su Plan</a>
+
+        <div style="margin-top:22px">
+          <div class="card" style="margin-top:18px">
+            <h3 style="margin-bottom:6px">Resumen profesional</h3>
+            <p class="lead" style="margin:0;color:var(--muted)">Profesional con experiencia en sector público y privado, especializada en supervisión de obras, gestión técnica y control de calidad. Primera vez en postulación a cargo municipal.</p>
+            <div class="tags" style="margin-top:12px">
+              <div class="tag">Compromiso</div>
+              <div class="tag">Transparencia</div>
+              <div class="tag">Proyectos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="profile-card">
+          <img src="assets/images/profile.jpg" alt="Leonor Quispe">
+          <h3>Leonor Quispe González</h3>
+          <div style="font-size:14px;color:var(--muted)">Ingeniera Civil — Gestión y proyectos</div>
+          <div style="margin-top:12px" class="tags">
+            <div class="tag">+30 años</div>
+            <div class="tag">Liderazgo</div>
+          </div>
+        </div>
+        <div style="margin-top:14px" class="card">
+          <strong>Galería</strong>
+          <div class="gallery" style="margin-top:10px">
+            <img src="assets/images/photo1.jpg" alt="">
+            <img src="assets/images/photo2.jpg" alt="">
+            <img src="assets/images/photo3.jpg" alt="">
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PLAN -->
+    <section id="plan">
+      <h2 class="section-title"><span class="dot"></span> Plan de trabajo</h2>
+      <div class="grid cols-3">
+        <div class="card mini">
+          <div class="mini-head">
+            <div class="tag-mini">01</div>
+            <div>
+              <strong>Infraestructura Urbana</strong>
+              <p class="lead">Supervisión técnica y mantenimiento de vías y espacios públicos.</p>
+            </div>
+          </div>
+          <div class="details hidden">
+            <ul>
+              <li>Diagnóstico de vías principales</li>
+              <li>Plan de mantenimiento 3 años</li>
+              <li>Monitoreo y control de calidad</li>
+            </ul>
+          </div>
+          <div class="toggle-btn" data-target="plan1">Ver más</div>
+        </div>
+
+        <div class="card mini">
+          <div class="mini-head">
+            <div class="tag-mini">02</div>
+            <div>
+              <strong>Servicios básicos</strong>
+              <p class="lead">Mejoras en agua y saneamiento en barrios prioritarios.</p>
+            </div>
+          </div>
+          <div class="details hidden">
+            <ul>
+              <li>Estudios de factibilidad</li>
+              <li>Interconexión de redes</li>
+            </ul>
+          </div>
+          <div class="toggle-btn" data-target="plan2">Ver más</div>
+        </div>
+
+        <div class="card mini">
+          <div class="mini-head">
+            <div class="tag-mini">03</div>
+            <div>
+              <strong>Gestión técnica</strong>
+              <p class="lead">Transparencia en contratos y supervisión profesional.</p>
+            </div>
+          </div>
+          <div class="details hidden">
+            <ul>
+              <li>Registro público de obras</li>
+              <li>Auditoría técnica externa</li>
+            </ul>
+          </div>
+          <div class="toggle-btn" data-target="plan3">Ver más</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="proyectos">
+      <h2 class="section-title"><span class="dot"></span> Proyectos destacados</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Mejoramiento vial - Barrio Centro</h3>
+          <p class="lead">Intervención técnica en diseño y supervisión.</p>
+          <div class="toggle-btn" data-target="proj1">Detalles</div>
+          <div class="details hidden" id="proj1">
+            <ul>
+              <li>Diseño geometric y estructural</li>
+              <li>Supervisión de obra</li>
+              <li>Entrega y puesta en servicio</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Saneamiento sector Norte</h3>
+          <p class="lead">Proyecto de mejora de redes y tratamiento.</p>
+          <div class="toggle-btn" data-target="proj2">Detalles</div>
+          <div class="details hidden" id="proj2">
+            <ul>
+              <li>Levantamiento topográfico</li>
+              <li>Plan ejecutivo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECONOCIMIENTOS -->
+    <section id="reconocimientos">
+      <h2 class="section-title"><span class="dot"></span> Reconocimientos</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <strong>Primera Presidenta - Colegio de Ingenieros (Potosí)</strong>
+          <p class="lead">Reconocimiento por liderazgo y fomento a la profesión.</p>
+        </div>
+        <div class="card">
+          <strong>Distinción técnica A (2015)</strong>
+          <p class="lead">Por supervisión de proyecto de gran impacto.</p>
+        </div>
+        <div class="card">
+          <strong>Trayectoria profesional</strong>
+          <p class="lead">Más de 30 años en proyectos e investigación técnica.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="max-width:900px;margin:0 auto">
+        © <strong>Leonor Quispe González</strong> — Información pública. <span style="color:var(--muted)">Contacto: contacto@ejemplo.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle details
+    document.querySelectorAll('.toggle-btn').forEach(btn=>{
+      btn.addEventListener('click', e=>{
+        const target = btn.getAttribute('data-target') || btn.nextElementSibling?.id;
+        let el = null;
+        if(target) el = document.getElementById(target) || document.querySelector('[data-target-id="'+target+'"]');
+        // fallback: next .details
+        if(!el){
+          const next = btn.parentElement.querySelector('.details');
+          el = next;
+        }
+        if(!el) return;
+        el.classList.toggle('hidden');
+        btn.textContent = el.classList.contains('hidden') ? 'Ver más' : 'Cerrar';
+      })
+    });
+
+    // Smooth scroll (nav links)
+    document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth',block:'start'});
+      })
+    });
+  </script>
+</body>
+</html>
