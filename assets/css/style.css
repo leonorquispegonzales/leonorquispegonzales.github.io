@@ -1,1 +1,144 @@
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f6f8f7;
+  color: #1e1e1e;
+}
+
+/* NAV */
+.navbar {
+  background: #0f6b4d;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px;
+  background: linear-gradient(135deg, #0f6b4d, #1b8f68);
+  color: #fff;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.section.light {
+  background: #fff;
+}
+
+.section.green {
+  background: #0f6b4d;
+  color: #fff;
+}
+
+.section h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
+}
+
+.section-text {
+  max-width: 900px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #fff;
+  color: #1e1e1e;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.section.green .card {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+/* GRID */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.box {
+  background: linear-gradient(135deg, #1b8f68, #0f6b4d);
+  color: #fff;
+  padding: 40px;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+  background: #0f6b4d;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
