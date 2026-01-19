@@ -1,339 +1,233 @@
-!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Leonor Quispe González — Perfil</title>
-  <meta name="description" content="Leonor Quispe González — Ingeniera Civil. Trayectoria, Plan, Proyectos y Reconocimientos.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leonor Quispe Gonzales | Ingeniería y Gestión</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --green:#0E7B5D;        /* verde elegante primario */
-      --green-acc:#18A879;   /* acento */
-      --muted:#6b6b6b;
-      --dark:#111111;
-      --bg:#ffffff;
-      --card:#fbfbfb;
-      --radius:14px;
-      --maxw:1200px;
+      --green:#0f7f4d;           /* verde elegante */
+      --green-2:#12a36a;         /* acento */
+      --green-soft:#e8f6ef;      /* fondo suave */
+      --dark:#0b1f16;
+      --muted:#5f6f69;
+      --white:#ffffff;
+      --radius:22px;
+      --shadow:0 20px 40px rgba(0,0,0,.08);
     }
     *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased}
-    header{position:sticky;top:0;background:rgba(255,255,255,0.96);backdrop-filter:blur(6px);z-index:100;border-bottom:1px solid #eee}
-    .wrap{max-width:var(--maxw);margin:0 auto;padding:18px}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--green),var(--green-acc));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;box-shadow:0 12px 30px rgba(14,123,93,0.12)}
-    /* NAV links are green as requested */
-    nav a{color:var(--green);text-decoration:none;margin-left:14px;font-weight:700}
-    nav a:hover{opacity:.9}
-
-    /* social left bar */
-    .social-bar{
-      position:fixed;left:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:10px;z-index:90;
+    body{
+      margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto; color:var(--dark);
+      background:#f7fbf9; line-height:1.55;
     }
-    .social-bar a{width:44px;height:44px;border-radius:10px;background:linear-gradient(180deg,var(--green),var(--green-acc));display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;box-shadow:0 10px 22px rgba(14,123,93,0.12);transition:transform .16s}
-    .social-bar a:hover{transform:translateX(6px) scale(1.03)}
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
 
-    /* HERO layout like the reference (left text, right image) */
-    main{max-width:var(--maxw);margin:0 auto;padding:28px 18px 80px}
-    .hero{display:grid;grid-template-columns:1fr 520px;gap:28px;align-items:center;padding:18px 0}
-    .hero h1{font-size:36px;margin:0 0 8px}
-    .hero p.lead{color:var(--muted);margin:0 0 16px}
-    .cta{display:inline-block;background:linear-gradient(90deg,var(--green),var(--green-acc));color:white;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:700;box-shadow:0 14px 36px rgba(14,123,93,0.12)}
-    /* hero card right */
-    .hero-card{position:relative;border-radius:20px;overflow:hidden;box-shadow:0 20px 50px rgba(10,10,10,0.06)}
-    .hero-card img{width:100%;height:100%;object-fit:cover;display:block}
-    .hero-overlay{
-      position:absolute;inset:0;background:linear-gradient(180deg,transparent 10%, rgba(0,0,0,0.06) 80%);pointer-events:none;
+    /* NAV */
+    .nav{
+      position:sticky; top:0; z-index:50; background:var(--green);
+      box-shadow:0 8px 24px rgba(0,0,0,.12);
     }
+    .nav .wrap{max-width:1200px; margin:auto; padding:14px 20px; display:flex; align-items:center; gap:18px}
+    .brand{display:flex; align-items:center; gap:12px; color:#fff; font-weight:800}
+    .brand .dot{width:10px; height:10px; border-radius:50%; background:#7ff0c0}
+    .menu{margin-left:auto; display:flex; gap:18px}
+    .menu a{color:#eafff6; font-weight:500; opacity:.9}
+    .menu a:hover{opacity:1}
 
-    /* profile compact */
-    .profile-row{display:flex;gap:18px;align-items:center;margin-top:18px}
+    /* HERO */
+    .hero{
+      background:linear-gradient(135deg, var(--green) 0%, #0c6a41 60%, #0b5a38 100%);
+      color:#fff; overflow:hidden;
+    }
+    .hero .wrap{max-width:1200px; margin:auto; padding:70px 20px 90px; display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:center}
+    .kicker{color:#c9ffe6; font-weight:600; letter-spacing:.08em; text-transform:uppercase}
+    h1{font-size:48px; line-height:1.05; margin:12px 0 18px}
+    .lead{font-size:18px; color:#eafff6}
+    .cta{display:flex; gap:14px; margin-top:26px}
+    .btn{padding:14px 22px; border-radius:999px; font-weight:600}
+    .btn.primary{background:#7ff0c0; color:#063d27}
+    .btn.ghost{border:1px solid rgba(255,255,255,.35)}
+    .hero-card{
+      background:rgba(255,255,255,.1); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow)
+    }
     .avatar{
-      width:120px;height:120px;border-radius:50%;overflow:hidden;border:6px solid rgba(14,123,93,0.10);box-shadow:0 24px 40px rgba(14,123,93,0.06);cursor:pointer;
+      width:220px; aspect-ratio:1; border-radius:50%; overflow:hidden; border:6px solid rgba(255,255,255,.35)
     }
-    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .badges{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:18px}
+    .badge{background:rgba(255,255,255,.14); border-radius:14px; padding:12px 14px; font-weight:600}
 
-    /* galleries: show many images under hero (full-width section) */
-    .gallery-section{padding:28px 0}
-    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-    .gallery-grid img{width:100%;height:160px;object-fit:cover;border-radius:10px;cursor:pointer;transition:transform .18s,box-shadow .18s}
-    .gallery-grid img:hover{transform:translateY(-6px);box-shadow:0 26px 46px rgba(14,123,93,0.08)}
-
-    /* plan / projects / recognitions */
-    section{padding:48px 0;border-top:1px solid #f6f6f6}
-    h2.section-title{display:flex;align-items:center;gap:12px;margin:0 0 18px;font-size:20px}
-    h2.section-title span.dot{width:12px;height:12px;background:var(--green);border-radius:50%}
-    .grid-proj{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .proj-card{background:linear-gradient(180deg,#fff,var(--card));padding:18px;border-radius:14px;box-shadow:0 12px 34px rgba(14,123,93,0.04)}
-    .proj-card h3{margin:0 0 6px;font-size:16px}
-    .proj-meta{color:var(--muted);font-size:13px;margin-bottom:8px}
-
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card-compact{background:linear-gradient(180deg,#fff,var(--card));padding:14px;border-radius:12px;box-shadow:0 10px 28px rgba(14,123,93,0.04)}
-
-    /* modal full screen */
-    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:2200;background:rgba(10,10,10,0.82)}
-    .modal.open{display:flex}
-    .modal img{max-width:96%;max-height:94%;border-radius:8px;box-shadow:0 30px 60px rgba(0,0,0,0.6)}
-
-    /* responsive */
-    @media (max-width:1100px){
-      .hero{grid-template-columns:1fr 420px}
-      .gallery-grid{grid-template-columns:repeat(3,1fr)}
-      .grid-proj{grid-template-columns:repeat(2,1fr)}
-      .grid-3{grid-template-columns:repeat(2,1fr)}
-    }
-    @media (max-width:760px){
-      nav{flex-direction:column;align-items:flex-start;gap:8px}
-      .hero{grid-template-columns:1fr;gap:14px}
-      .gallery-grid{grid-template-columns:repeat(2,1fr)}
-      .grid-proj{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .social-bar{display:none}
-      .avatar{width:96px;height:96px}
-    }
-
-    /* small utilities */
+    /* SECTION */
+    section{padding:70px 20px}
+    .wrap{max-width:1200px; margin:auto}
+    .section-head{display:flex; align-items:end; justify-content:space-between; gap:20px; margin-bottom:26px}
+    .section-head h2{font-size:34px; margin:0}
     .muted{color:var(--muted)}
-    .small{font-size:13px;color:var(--muted)}
-    a.no-style{color:inherit;text-decoration:none}
+
+    /* CARDS */
+    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:18px}
+    .card{
+      background:#fff; border-radius:var(--radius); padding:22px; box-shadow:var(--shadow)
+    }
+    .card h3{margin:0 0 8px}
+    .pill{display:inline-block; padding:6px 12px; border-radius:999px; background:var(--green-soft); color:var(--green); font-weight:600}
+
+    /* TIMELINE (compact) */
+    .timeline{display:grid; grid-template-columns:1fr; gap:14px}
+    .item{display:grid; grid-template-columns:120px 1fr; gap:14px}
+    .year{font-weight:800; color:var(--green)}
+
+    /* GALLERY */
+    .gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:10px}
+    .gallery img{border-radius:16px; cursor:pointer}
+    .lightbox{
+      position:fixed; inset:0; background:rgba(0,0,0,.92); display:none; place-items:center; z-index:100
+    }
+    .lightbox img{max-width:96vw; max-height:96vh}
+
+    /* FOOTER */
+    footer{background:#0b5a38; color:#eafff6}
+    footer .wrap{padding:36px 20px; display:flex; gap:20px; align-items:center}
+
+    @media(max-width:980px){
+      .hero .wrap{grid-template-columns:1fr}
+      h1{font-size:38px}
+      .grid-3,.grid-4,.gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:520px){
+      .grid-3,.grid-4,.gallery{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
 
-  <!-- Social vertical -->
-  <div class="social-bar" aria-hidden="false">
-    <a href="https://www.facebook.com/" target="_blank" title="Facebook" aria-label="Facebook">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07c0 5 3.66 9.14 8.44 9.93v-7.02H8.08v-2.91h2.36V9.41c0-2.33 1.37-3.62 3.47-3.62.99 0 2.03.18 2.03.18v2.23h-1.14c-1.12 0-1.47.7-1.47 1.42v1.71h2.5l-.4 2.91h-2.09v7.02C18.34 21.21 22 17.07 22 12.07z" fill="white"/></svg>
-    </a>
-    <a href="https://www.instagram.com/" target="_blank" title="Instagram" aria-label="Instagram">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.5A4.5 4.5 0 1 0 16.5 13 4.5 4.5 0 0 0 12 8.5zM18.5 6a1.2 1.2 0 1 0 1.2 1.2A1.2 1.2 0 0 0 18.5 6z" fill="white"/></svg>
-    </a>
-    <a href="https://www.tiktok.com/" target="_blank" title="TikTok" aria-label="TikTok">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M16 3h2a3 3 0 0 0 3-3v11.6a4.4 4.4 0 1 1-4-4V6h-3V3z" fill="white"/></svg>
-    </a>
-  </div>
-
-  <header>
+  <!-- NAV -->
+  <nav class="nav">
     <div class="wrap">
-      <nav>
-        <div class="brand">
-          <div class="logo">AS</div>
-          <div>
-            <strong>Alianza Social</strong><br><small class="small">Leonor Quispe González</small>
-          </div>
+      <div class="brand"><span class="dot"></span> Leonor Quispe Gonzales</div>
+      <div class="menu">
+        <a href="#home">Inicio</a>
+        <a href="#plan">Plan</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#reconocimientos">Reconocimientos</a>
+        <a href="#galeria">Galería</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO / HOME -->
+  <header id="home" class="hero">
+    <div class="wrap">
+      <div>
+        <div class="kicker">Ingeniería • Gestión • Servicio Público</div>
+        <h1>Experiencia que construye<br/>resultados para Potosí</h1>
+        <p class="lead">Ingeniera Civil con más de <strong>30 años</strong> liderando, supervisando y ejecutando proyectos públicos y privados de alto impacto.</p>
+        <div class="cta">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn ghost" href="#reconocimientos">Trayectoria</a>
         </div>
-        <div>
-          <a href="#home">Home</a>
-          <a href="#plan">Plan</a>
-          <a href="#proyectos">Proyectos</a>
-          <a href="#reconocimientos">Reconocimientos</a>
+      </div>
+      <div class="hero-card">
+        <div class="avatar"><img src="public/images/asset1.webp" alt="Leonor Quispe"></div>
+        <div class="badges">
+          <div class="badge">Ing. Civil</div>
+          <div class="badge">30+ años</div>
+          <div class="badge">Gestión Pública</div>
+          <div class="badge">Sector Privado</div>
         </div>
-      </nav>
+      </div>
     </div>
   </header>
 
-  <main id="home" class="wrap">
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="intro">
-        <h1 id="hero-title">Leonor Estela Quispe Gonzales</h1>
-        <p class="lead muted">Ingeniera Civil • Carnet: 3693902Pt • +30 años de experiencia en proyectos, supervisión y gestión técnica en el sector público y privado.</p>
-        <p class="small">Ingeniera con trayectoria en edificaciones educacionales, hospitalarias, vías, saneamiento, infraestructura deportiva y comunitaria. Líder técnica con experiencia en dirección y control de proyectos.</p>
-        <div style="margin-top:18px">
-          <a class="cta" href="#proyectos">Ver Proyectos</a>
-        </div>
-
-        <div class="profile-row">
-          <div class="avatar" title="Ver foto">
-            <img src="public/images/asset1.webp" alt="Foto principal Leonor" id="heroProfile">
-          </div>
-          <div>
-            <div style="font-weight:700">Leonor Estela Quispe Gonzales</div>
-            <div class="small muted" style="margin-top:6px">Ingeniera Civil — Gestión & Proyectos</div>
-            <div class="tags" style="margin-top:10px">
-              <div class="tag">Compromiso</div>
-              <div class="tag">Transparencia</div>
-              <div class="tag">+30 años</div>
-            </div>
-          </div>
-        </div>
+  <!-- PERFIL (RESUMEN) -->
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Perfil Profesional</h2>
+        <span class="muted">Dirección • Supervisión • Fiscalización</span>
       </div>
-
-      <aside>
-        <div class="hero-card">
-          <!-- hero image similar to template: use asset2.webp -->
-          <img src="public/images/asset2.webp" alt="Imagen hero" id="heroBig">
-          <div class="hero-overlay"></div>
-        </div>
-      </aside>
-    </section>
-
-    <!-- GALLERY (visible under home as requested) -->
-    <section class="gallery-section">
-      <h2 class="section-title"><span class="dot"></span> Galería</h2>
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- 28 assets -->
-        <img src="public/images/asset1.webp" alt="asset1" data-full="public/images/asset1.webp">
-        <img src="public/images/asset2.webp" alt="asset2" data-full="public/images/asset2.webp">
-        <img src="public/images/asset3.webp" alt="asset3" data-full="public/images/asset3.webp">
-        <img src="public/images/asset4.webp" alt="asset4" data-full="public/images/asset4.webp">
-        <img src="public/images/asset5.webp" alt="asset5" data-full="public/images/asset5.webp">
-        <img src="public/images/asset6.webp" alt="asset6" data-full="public/images/asset6.webp">
-        <img src="public/images/asset7.webp" alt="asset7" data-full="public/images/asset7.webp">
-        <img src="public/images/asset8.webp" alt="asset8" data-full="public/images/asset8.webp">
-        <img src="public/images/asset9.webp" alt="asset9" data-full="public/images/asset9.webp">
-        <img src="public/images/asset10.webp" alt="asset10" data-full="public/images/asset10.webp">
-        <img src="public/images/asset11.webp" alt="asset11" data-full="public/images/asset11.webp">
-        <img src="public/images/asset12.webp" alt="asset12" data-full="public/images/asset12.webp">
-        <img src="public/images/asset13.webp" alt="asset13" data-full="public/images/asset13.webp">
-        <img src="public/images/asset14.webp" alt="asset14" data-full="public/images/asset14.webp">
-        <img src="public/images/asset15.webp" alt="asset15" data-full="public/images/asset15.webp">
-        <img src="public/images/asset16.webp" alt="asset16" data-full="public/images/asset16.webp">
-        <img src="public/images/asset17.webp" alt="asset17" data-full="public/images/asset17.webp">
-        <img src="public/images/asset18.webp" alt="asset18" data-full="public/images/asset18.webp">
-        <img src="public/images/asset19.webp" alt="asset19" data-full="public/images/asset19.webp">
-        <img src="public/images/asset20.webp" alt="asset20" data-full="public/images/asset20.webp">
-        <img src="public/images/asset21.webp" alt="asset21" data-full="public/images/asset21.webp">
-        <img src="public/images/asset22.webp" alt="asset22" data-full="public/images/asset22.webp">
-        <img src="public/images/asset23.webp" alt="asset23" data-full="public/images/asset23.webp">
-        <img src="public/images/asset24.webp" alt="asset24" data-full="public/images/asset24.webp">
-        <img src="public/images/asset25.webp" alt="asset25" data-full="public/images/asset25.webp">
-        <img src="public/images/asset26.webp" alt="asset26" data-full="public/images/asset26.webp">
-        <img src="public/images/asset27.webp" alt="asset27" data-full="public/images/asset27.webp">
-        <img src="public/images/asset28.webp" alt="asset28" data-full="public/images/asset28.webp">
-      </div>
-      <div style="margin-top:10px;text-align:center"><small class="small muted">Haga clic en cualquier imagen para ampliar a pantalla completa</small></div>
-    </section>
-
-    <!-- PLAN -->
-    <section id="plan">
-      <h2 class="section-title"><span class="dot"></span> Plan de trabajo (resumen)</h2>
-      <div class="grid-proj">
-        <div class="proj-card">
-          <h3>Infraestructura urbana</h3>
-          <div class="proj-meta">Supervisión técnica • Prioridad</div>
-          <p class="muted">Supervisión, mantenimiento y control de calidad en vías y espacios públicos.</p>
-        </div>
-        <div class="proj-card">
-          <h3>Servicios básicos</h3>
-          <div class="proj-meta">Agua y saneamiento • Prioridad</div>
-          <p class="muted">Programas de mejora en redes y tratamiento de aguas.</p>
-        </div>
-        <div class="proj-card">
-          <h3>Gestión técnica</h3>
-          <div class="proj-meta">Transparencia • Control</div>
-          <p class="muted">Protocolos de supervisión y auditoría técnica externa.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROYECTOS -->
-    <section id="proyectos">
-      <h2 class="section-title"><span class="dot"></span> Proyectos destacados</h2>
-      <div class="grid-proj">
-        <div class="proj-card">
-          <h3>Mejoramiento vial - Barrio Centro</h3>
-          <div class="proj-meta">Diseño y supervisión • 2018</div>
-          <p class="muted">Intervención técnica en diseño y supervisión.</p>
-        </div>
-        <div class="proj-card">
-          <h3>Saneamiento sector Norte</h3>
-          <div class="proj-meta">Plan ejecutivo • 2019</div>
-          <p class="muted">Proyecto de mejora de redes y tratamiento.</p>
-        </div>
-        <div class="proj-card">
-          <h3>Renovación plaza - Plaza X</h3>
-          <div class="proj-meta">Ejecución • 2020</div>
-          <p class="muted">Rehabilitación de área pública con accesibilidad.</p>
-        </div>
-        <div class="proj-card">
-          <h3>Sistema peatonal - Sector Y</h3>
-          <div class="proj-meta">Ejecución • 2016</div>
-          <p class="muted">Diseño de vías peatonales seguras.</p>
-        </div>
-        <div class="proj-card">
-          <h3>Mejoras en iluminación</h3>
-          <div class="proj-meta">Coordinación técnica • 2015</div>
-          <p class="muted">Plan de modernización del alumbrado público.</p>
-        </div>
-        <div class="proj-card">
-          <h3>Plan de drenaje - Zona Sur</h3>
-          <div class="proj-meta">Estudio y supervisión • 2017</div>
-          <p class="muted">Control de escurrimientos y mitigación.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- RECONOCIMIENTOS -->
-    <section id="reconocimientos">
-      <h2 class="section-title"><span class="dot"></span> Reconocimientos y distinciones</h2>
       <div class="grid-3">
-        <!-- Abrid con la lista resumida usando la info que diste -->
-        <div class="card-compact">
-          <strong>Primera Presidenta - Sociedad de Ingenieros (Potosí)</strong>
-          <p class="muted" style="margin-top:8px">Reconocimiento por liderazgo y fomento a la profesión.</p>
-        </div>
-        <div class="card-compact">
-          <strong>Distinción técnica y 15 años de ejercicio (2016)</strong>
-          <p class="muted" style="margin-top:8px">Reconocimiento por trayectoria profesional.</p>
-        </div>
-        <div class="card-compact">
-          <strong>Distinción al Ejercicio Profesional de la Mujer (2023)</strong>
-          <p class="muted" style="margin-top:8px">Reconocimiento por su contribución en ingeniería.</p>
-        </div>
-
-        <div class="card-compact">
-          <strong>Reconocimientos institucionales (varios, 2019-2024)</strong>
-          <p class="muted" style="margin-top:8px">Reconocimientos otorgados por SIB, colegios y cámaras.</p>
-        </div>
-        <div class="card-compact">
-          <strong>Reconocimiento - Cámara de Diputados (2024)</strong>
-          <p class="muted" style="margin-top:8px">Reconocimiento por ejercicio profesional e institucional.</p>
-        </div>
-        <div class="card-compact">
-          <strong>Huésped grato - Sucre (2025)</strong>
-          <p class="muted" style="margin-top:8px">Distinción otorgada por el Concejo Municipal de Sucre.</p>
-        </div>
+        <div class="card"><h3>Liderazgo</h3><p>Gestión y administración de equipos multidisciplinarios en obras educativas, hospitalarias, viales, productivas y deportivas.</p></div>
+        <div class="card"><h3>Experiencia</h3><p>Amplio conocimiento normativo para la administración pública y ejecución eficiente de proyectos.</p></div>
+        <div class="card"><h3>Impacto</h3><p>Infraestructura urbana, saneamiento básico y equipamiento comunal con resultados medibles.</p></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <!-- PROYECTOS -->
+  <section id="proyectos" style="background:var(--green-soft)">
+    <div class="wrap">
+      <div class="section-head"><h2>Proyectos</h2><span class="pill">Selección destacada</span></div>
+      <div class="grid-3">
+        <div class="card"><h3>Infraestructura Educativa</h3><p>Dirección y fiscalización de edificaciones educativas.</p><span class="muted">2000–2024</span></div>
+        <div class="card"><h3>Salud</h3><p>Proyectos hospitalarios y equipamiento.</p><span class="muted">2009–2018</span></div>
+        <div class="card"><h3>Vías y Transporte</h3><p>Planificación y supervisión vial.</p><span class="muted">2011–2015</span></div>
+        <div class="card"><h3>Productiva</h3><p>Infraestructura para generación de empleo.</p><span class="muted">2017</span></div>
+        <div class="card"><h3>Deportiva</h3><p>Coliseos y campos deportivos.</p><span class="muted">2016–2020</span></div>
+        <div class="card"><h3>Recreativa</h3><p>Parques y espacios públicos.</p><span class="muted">2018–2024</span></div>
+      </div>
+    </div>
+  </section>
 
-  <footer style="border-top:1px solid #f6f6f6;padding:28px 0;text-align:center;color:var(--muted);font-size:14px">
-    <div class="wrap">© <strong>Leonor Estela Quispe Gonzales</strong> — Información pública • Contacto: contacto@ejemplo.com</div>
+  <!-- PLAN (placeholder) -->
+  <section id="plan">
+    <div class="wrap">
+      <div class="section-head"><h2>Plan</h2><span class="muted">Sección editable</span></div>
+      <div class="grid-3">
+        <div class="card"><h3>Compromiso</h3><p>Gestión transparente y resultados.</p></div>
+        <div class="card"><h3>Proyectos</h3><p>Prioridad en obras de alto impacto.</p></div>
+        <div class="card"><h3>Transparencia</h3><p>Seguimiento y rendición.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECONOCIMIENTOS -->
+  <section id="reconocimientos" style="background:var(--green-soft)">
+    <div class="wrap">
+      <div class="section-head"><h2>Reconocimientos</h2><span class="pill">Trayectoria</span></div>
+      <div class="grid-3">
+        <div class="card"><p>Distinción a la gestión como Presidenta SIB Potosí.</p><span class="muted">2018–2020</span></div>
+        <div class="card"><p>Reconocimientos por ejercicio profesional (15 y 20 años).</p><span class="muted">2016–2021</span></div>
+        <div class="card"><p>Distinción a la Mujer en la Ingeniería.</p><span class="muted">2023</span></div>
+        <div class="card"><p>Reconocimiento institucional – Cámara de Diputados.</p><span class="muted">2024</span></div>
+        <div class="card"><p>Huèsped Grato – Ciudad de Sucre.</p><span class="muted">2025</span></div>
+        <div class="card"><p>Equipo organizador Encuentro Nacional de Ingenieras.</p><span class="muted">2025</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section id="galeria">
+    <div class="wrap">
+      <div class="section-head"><h2>Galería</h2><span class="muted">28 imágenes</span></div>
+      <div class="gallery">
+        <!-- assets 1..28 -->
+        <img src="public/images/asset1.webp" onclick="openLb(this.src)">
+        <img src="public/images/asset2.webp" onclick="openLb(this.src)">
+        <img src="public/images/asset3.webp" onclick="openLb(this.src)">
+        <img src="public/images/asset4.webp" onclick="openLb(this.src)">
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lb" onclick="this.style.display='none'"><img id="lbimg"></div>
+
+  <footer>
+    <div class="wrap">
+      <strong>Leonor Quispe Gonzales</strong>
+      <span class="muted">Ingeniería y Gestión</span>
+    </div>
   </footer>
 
-  <!-- modal image -->
-  <div id="modal" class="modal" role="dialog" aria-hidden="true" tabindex="-1">
-    <img src="" alt="Imagen ampliada" id="modalImg">
-  </div>
-
   <script>
-    // open modal for gallery images
-    const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modalImg');
-    document.querySelectorAll('.gallery-grid img, #heroBig, #heroProfile').forEach(img=>{
-      img.addEventListener('click', e=>{
-        const src = img.getAttribute('data-full') || img.src;
-        modalImg.src = src;
-        modal.classList.add('open');
-        modal.setAttribute('aria-hidden','false');
-      });
-    });
-    modal.addEventListener('click', ()=>{ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); modalImg.src='';});
-    document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); modalImg.src=''; } });
-
-    // smooth scroll for nav links
-    document.querySelectorAll('nav a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const el = document.querySelector(a.getAttribute('href'));
-        if(el) el.scrollIntoView({behavior:'smooth', block:'start'});
-      })
-    });
+    function openLb(src){
+      document.getElementById('lbimg').src = src;
+      document.getElementById('lb').style.display='grid';
+    }
   </script>
 </body>
 </html>
