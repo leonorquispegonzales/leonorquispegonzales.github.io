@@ -1,275 +1,136 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Leonor Quispe Gonzales | Ingeniería y Gestión</title>
+  <meta charset="UTF-8">
+  <title>Leonor Quispe Gonzales</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-    --green: #0E7B5D;       /* verde elegante primario */
-    --green-acc: #18A879;   /* acento */
-    --green-light: #DFF7EE; /* fondo suave */
-    --muted: #6b6b6b;
-    --dark: #0b1f16;
-    --bg: #f6fbf8;
-    --card: #ffffff;
-    --radius: 18px;
-    --maxw: 1200px;
-    --shadow: 0 18px 40px rgba(14,123,93,0.08);
-  }
-  
-  /* base */
-  *{box-sizing:border-box}
-  body{font-family:Inter, system-ui, Arial, sans-serif;margin:0;background:var(--bg);color:var(--dark);line-height:1.45}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:20px}
-  
-  /* HEADER / NAV: VERDE EMPASTADO (solicitud) */
-  header{
-    position:sticky; top:0; z-index:200;
-    background:linear-gradient(90deg,var(--green),var(--green-acc));
-    box-shadow:0 8px 30px rgba(10,50,30,0.12);
-    color:#fff;
-  }
-  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 20px}
-  .brand{display:flex;gap:12px;align-items:center}
-  .brand .logo{width:54px;height:54px;border-radius:12px;background:#fff;color:var(--green);display:flex;align-items:center;justify-content:center;font-weight:800}
-  header nav a{color:#eafff6;text-decoration:none;margin-left:18px;font-weight:700}
-  header nav a:hover{opacity:.95;transform:translateY(-1px)}
-  
-  /* HERO: dos columnas, con box colorido a la derecha */
-  .hero{display:grid;grid-template-columns:1fr 520px;gap:28px;align-items:center;padding:44px 0}
-  .hero h1{font-size:40px;margin:0;color:#ffffff;line-height:1.05}
-  .hero p{color:rgba(255,255,255,0.92);margin:12px 0 0}
-  .cta{margin-top:18px;display:flex;gap:12px}
-  .btn{padding:12px 18px;border-radius:999px;font-weight:700;border:none;cursor:pointer}
-  .btn.primary{background:var(--green-acc);color:#062b1f;box-shadow:0 14px 36px rgba(14,123,93,0.12)}
-  .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.18);color:#fff}
-  
-  /* Hero right colorful box (inspired by your purple sample but green) */
-  .hero-card{
-    border-radius:22px; overflow:hidden; position:relative; min-height:360px;
-    background:linear-gradient(135deg, rgba(14,123,93,0.95), rgba(24,162,121,0.9));
-    color:#fff; padding:28px; box-shadow:var(--shadow);
-  }
-  .hero-card .title{font-size:22px;font-weight:700;margin-bottom:10px}
-  .hero-card p{opacity:0.95}
-  .hero-card .cta-small{margin-top:18px;display:flex;gap:12px}
-  .hero-card .circle-accent{
-    position:absolute;width:110px;height:110px;border-radius:999px;background:rgba(255,255,255,0.08);
-    right:-40px; top:-40px;filter:blur(2px)
-  }
-  
-  /* profile */
-  .profile-row{display:flex;gap:18px;align-items:center;margin-top:16px}
-  .avatar{width:120px;height:120px;border-radius:999px;overflow:hidden;border:6px solid rgba(255,255,255,0.12);box-shadow:0 18px 34px rgba(14,123,93,0.06);cursor:pointer}
-  .avatar img{width:100%;height:100%;object-fit:cover}
-  
-  /* GALLERY grid */
-  .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-  .gallery-grid img{width:100%;height:160px;object-fit:cover;border-radius:12px;cursor:pointer;transition:transform .18s ease,box-shadow .18s}
-  .gallery-grid img:hover{transform:translateY(-6px);box-shadow:0 28px 50px rgba(14,123,93,0.08)}
-  
-  /* NEW: Recognition colorful boxes (grid) */
-  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .rec-card{
-    border-radius:16px;padding:18px;color:#032016;
-    background:linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.92));
-    box-shadow:0 10px 40px rgba(10,60,40,0.06);
-    position:relative; overflow:hidden;
-  }
-  .rec-card .label{
-    position:absolute;left:-40px;top:-40px;width:140px;height:140px;border-radius:50%;
-    background:linear-gradient(135deg,var(--green),var(--green-acc));opacity:0.12;filter:blur(10px)
-  }
-  .rec-card h4{margin:0 0 6px}
-  .rec-card p{margin:0;color:var(--muted);font-size:14px}
-  
-  /* Alternative "bold accent cards" (colorful look) */
-  .rec-accent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .rec-accent{
-    border-radius:16px;padding:18px;color:#fff;font-weight:700;
-    background:linear-gradient(135deg,var(--green),var(--green-acc));
-    box-shadow:0 18px 46px rgba(14,123,93,0.12);
-    min-height:120px;display:flex;flex-direction:column;justify-content:center;
-  }
-  .rec-accent small{opacity:0.9;font-weight:600}
-  
-  /* subtle card for projects 3-col */
-  .grid-proj{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .proj-card{background:#fff;border-radius:12px;padding:14px;box-shadow:0 14px 36px rgba(14,123,93,0.06)}
-  
-  /* MODAL full-screen */
-  .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(8,8,8,0.88);z-index:2200}
-  .modal.open{display:flex}
-  .modal img{max-width:94%;max-height:92%;border-radius:6px;box-shadow:0 30px 60px rgba(0,0,0,0.6)}
-  
-  /* responsive */
-  @media(max-width:1100px){
-    .hero{grid-template-columns:1fr}
-    .gallery-grid{grid-template-columns:repeat(3,1fr)}
-    .rec-grid,.rec-accent-grid{grid-template-columns:repeat(2,1fr)}
-    .grid-proj{grid-template-columns:repeat(2,1fr)}
-  }
-  @media(max-width:760px){
-    .gallery-grid{grid-template-columns:repeat(2,1fr)}
-    .rec-grid,.rec-accent-grid{grid-template-columns:1fr}
-    .grid-proj{grid-template-columns:1fr}
-  }
-
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="wrap">
-      <div class="brand"><span class="dot"></span> Leonor Quispe Gonzales</div>
-      <div class="menu">
-        <a href="#home">Inicio</a>
-        <a href="#plan">Plan</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#reconocimientos">Reconocimientos</a>
-        <a href="#galeria">Galería</a>
-      </div>
+<!-- NAV -->
+<header class="navbar">
+  <div class="nav-container">
+    <div class="logo">Leonor Quispe</div>
+    <nav>
+      <a href="#home">Inicio</a>
+      <a href="#perfil">Perfil</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#reconocimientos">Reconocimientos</a>
+      <a href="#galeria">Galería</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Ingeniería con experiencia,<br>gestión con liderazgo</h1>
+    <p>30 años construyendo infraestructura y desarrollo para Potosí</p>
+  </div>
+  <div class="hero-image">
+    <img src="assets/images/asset1.webp" alt="Leonor Quispe">
+  </div>
+</section>
+
+<!-- PERFIL -->
+<section id="perfil" class="section light">
+  <h2>Perfil Profesional</h2>
+  <p class="section-text">
+    Ingeniera Civil con amplia trayectoria en dirección, supervisión y fiscalización de obras públicas y privadas.
+    Especialista en gestión de proyectos urbanos, infraestructura educativa, hospitalaria, vial y productiva,
+    liderando equipos técnicos multidisciplinarios.
+  </p>
+</section>
+
+<!-- TRAYECTORIA -->
+<section id="trayectoria" class="section green">
+  <h2>Trayectoria Destacada</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Gestión Pública</h3>
+      <p>Dirección y fiscalización de obras en el Gobierno Municipal de Potosí y FPS.</p>
     </div>
-  </nav>
-
-  <!-- HERO / HOME -->
-  <header id="home" class="hero">
-    <div class="wrap">
-      <div>
-        <div class="kicker">Ingeniería • Gestión • Servicio Público</div>
-        <h1>Experiencia que construye<br/>resultados para Potosí</h1>
-        <p class="lead">Ingeniera Civil con más de <strong>30 años</strong> liderando, supervisando y ejecutando proyectos públicos y privados de alto impacto.</p>
-        <div class="cta">
-          <a class="btn primary" href="#proyectos">Ver proyectos</a>
-          <a class="btn ghost" href="#reconocimientos">Trayectoria</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="avatar"><img src="public/images/asset1.webp" alt="Leonor Quispe"></div>
-        <div class="badges">
-          <div class="badge">Ing. Civil</div>
-          <div class="badge">30+ años</div>
-          <div class="badge">Gestión Pública</div>
-          <div class="badge">Sector Privado</div>
-        </div>
-      </div>
+    <div class="card">
+      <h3>Sector Privado</h3>
+      <p>Gerente General y Gerente Técnica en empresas constructoras.</p>
     </div>
-  </header>
-
-  <!-- PERFIL (RESUMEN) -->
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <h2>Perfil Profesional</h2>
-        <span class="muted">Dirección • Supervisión • Fiscalización</span>
-      </div>
-      <div class="grid-3">
-        <div class="card"><h3>Liderazgo</h3><p>Gestión y administración de equipos multidisciplinarios en obras educativas, hospitalarias, viales, productivas y deportivas.</p></div>
-        <div class="card"><h3>Experiencia</h3><p>Amplio conocimiento normativo para la administración pública y ejecución eficiente de proyectos.</p></div>
-        <div class="card"><h3>Impacto</h3><p>Infraestructura urbana, saneamiento básico y equipamiento comunal con resultados medibles.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROYECTOS -->
-  <section id="proyectos" style="background:var(--green-soft)">
-    <div class="wrap">
-      <div class="section-head"><h2>Proyectos</h2><span class="pill">Selección destacada</span></div>
-      <div class="grid-3">
-        <div class="card"><h3>Infraestructura Educativa</h3><p>Dirección y fiscalización de edificaciones educativas.</p><span class="muted">2000–2024</span></div>
-        <div class="card"><h3>Salud</h3><p>Proyectos hospitalarios y equipamiento.</p><span class="muted">2009–2018</span></div>
-        <div class="card"><h3>Vías y Transporte</h3><p>Planificación y supervisión vial.</p><span class="muted">2011–2015</span></div>
-        <div class="card"><h3>Productiva</h3><p>Infraestructura para generación de empleo.</p><span class="muted">2017</span></div>
-        <div class="card"><h3>Deportiva</h3><p>Coliseos y campos deportivos.</p><span class="muted">2016–2020</span></div>
-        <div class="card"><h3>Recreativa</h3><p>Parques y espacios públicos.</p><span class="muted">2018–2024</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PLAN (placeholder) -->
-  <section id="plan">
-    <div class="wrap">
-      <div class="section-head"><h2>Plan</h2><span class="muted">Sección editable</span></div>
-      <div class="grid-3">
-        <div class="card"><h3>Compromiso</h3><p>Gestión transparente y resultados.</p></div>
-        <div class="card"><h3>Proyectos</h3><p>Prioridad en obras de alto impacto.</p></div>
-        <div class="card"><h3>Transparencia</h3><p>Seguimiento y rendición.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RECONOCIMIENTOS -->
-  <section id="reconocimientos-accent" style="padding-top:20px;background:transparent;">
-  <div class="wrap">
-    <div class="section-head"><h2>Reconocimientos destacados</h2><span class="pill">Validados institucionalmente</span></div>
-
-    <div class="rec-accent-grid" style="margin-top:12px">
-      <div class="rec-accent">
-        <div>Primera Presidenta — Sociedad de Ingenieros (Potosí)</div>
-        <small>Reconocimiento por liderazgo (2018–2020)</small>
-      </div>
-
-      <div class="rec-accent">
-        <div>Distinciones por trayectoria (15/20 años)</div>
-        <small>Reconocimientos profesionales (2016 / 2021)</small>
-      </div>
-
-      <div class="rec-accent">
-        <div>Distinción Mujer en la Ingeniería</div>
-        <small>Reconocimiento departamental (2023)</small>
-      </div>
-
-      <div class="rec-accent">
-        <div>Reconocimiento — Cámara de Diputados</div>
-        <small>Reconocimiento institucional (2024)</small>
-      </div>
-
-      <div class="rec-accent">
-        <div>Huèsped Grato — Sucre</div>
-        <small>Condecoración municipal (2025)</small>
-      </div>
-
-      <div class="rec-accent">
-        <div>Encuentro Nacional de Ingenieras</div>
-        <small>Organización y liderazgo (2025)</small>
-      </div>
+    <div class="card">
+      <h3>Liderazgo Institucional</h3>
+      <p>Presidenta y Vicepresidenta en instituciones nacionales de ingeniería.</p>
     </div>
   </div>
 </section>
 
-  <!-- GALERIA -->
-  <section id="galeria">
-    <div class="wrap">
-      <div class="section-head"><h2>Galería</h2><span class="muted">28 imágenes</span></div>
-      <div class="gallery">
-        <!-- assets 1..28 -->
-        <img src="public/images/asset1.webp" onclick="openLb(this.src)">
-        <img src="public/images/asset2.webp" onclick="openLb(this.src)">
-        <img src="public/images/asset3.webp" onclick="openLb(this.src)">
-        <img src="public/images/asset4.webp" onclick="openLb(this.src)">
-      </div>
-    </div>
-  </section>
+<!-- PROYECTOS -->
+<section id="proyectos" class="section light">
+  <h2>Áreas de Proyecto</h2>
+  <div class="grid-3">
+    <div class="box">Infraestructura Educativa</div>
+    <div class="box">Infraestructura Hospitalaria</div>
+    <div class="box">Vías y Transporte</div>
+    <div class="box">Infraestructura Productiva</div>
+    <div class="box">Espacios Deportivos</div>
+    <div class="box">Saneamiento Básico</div>
+  </div>
+</section>
 
-  <div class="lightbox" id="lb" onclick="this.style.display='none'"><img id="lbimg"></div>
+<!-- RECONOCIMIENTOS -->
+<section id="reconocimientos" class="section green">
+  <h2>Reconocimientos</h2>
+  <div class="cards icons">
+    <div class="card icon-card">Trayectoria Profesional</div>
+    <div class="card icon-card">Liderazgo Institucional</div>
+    <div class="card icon-card">Aporte al Desarrollo</div>
+    <div class="card icon-card">Gestión Pública Destacada</div>
+  </div>
+</section>
 
-  <footer>
-    <div class="wrap">
-      <strong>Leonor Quispe Gonzales</strong>
-      <span class="muted">Ingeniería y Gestión</span>
-    </div>
-  </footer>
+<!-- GALERÍA -->
+<section id="galeria" class="section light">
+  <h2>Galería</h2>
+  <div class="gallery">
+    <!-- 28 imágenes -->
+    <!-- solo duplicar líneas -->
+    <img src="assets/images/asset1.webp">
+    <img src="assets/images/asset2.webp">
+    <img src="assets/images/asset3.webp">
+    <img src="assets/images/asset4.webp">
+    <img src="assets/images/asset5.webp">
+    <img src="assets/images/asset6.webp">
+    <img src="assets/images/asset7.webp">
+    <img src="assets/images/asset8.webp">
+    <img src="assets/images/asset9.webp">
+    <img src="assets/images/asset10.webp">
+    <img src="assets/images/asset11.webp">
+    <img src="assets/images/asset12.webp">
+    <img src="assets/images/asset13.webp">
+    <img src="assets/images/asset14.webp">
+    <img src="assets/images/asset15.webp">
+    <img src="assets/images/asset16.webp">
+    <img src="assets/images/asset17.webp">
+    <img src="assets/images/asset18.webp">
+    <img src="assets/images/asset19.webp">
+    <img src="assets/images/asset20.webp">
+    <img src="assets/images/asset21.webp">
+    <img src="assets/images/asset22.webp">
+    <img src="assets/images/asset23.webp">
+    <img src="assets/images/asset24.webp">
+    <img src="assets/images/asset25.webp">
+    <img src="assets/images/asset26.webp">
+    <img src="assets/images/asset27.webp">
+    <img src="assets/images/asset28.webp">
+  </div>
+</section>
 
-  <script>
-    function openLb(src){
-      document.getElementById('lbimg').src = src;
-      document.getElementById('lb').style.display='grid';
-    }
-  </script>
+<footer class="footer">
+  © 2025 Leonor Quispe Gonzales
+</footer>
+
 </body>
 </html>
