@@ -40,7 +40,8 @@ h1, h2, h3, h4 {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: var(--green-primary); /* CAMBIADO A VERDE */
+  color: white; /* Texto en blanco */
   box-shadow: var(--shadow);
   z-index: 1000;
   padding: 15px 0;
@@ -61,7 +62,7 @@ h1, h2, h3, h4 {
   align-items: center;
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--green-primary);
+  color: white; /* CAMBIADO A BLANCO */
 }
 
 .logo i {
@@ -76,7 +77,7 @@ h1, h2, h3, h4 {
 
 .nav-link {
   text-decoration: none;
-  color: var(--dark);
+  color: white; /* CAMBIADO A BLANCO */
   margin-left: 30px;
   font-weight: 600;
   display: flex;
@@ -86,14 +87,13 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
+.nav-link:hover, .nav-link.active {
+  color: var(--green-light); /* Color más claro al hacer hover */
+}
+
 .nav-link i {
   margin-right: 8px;
 }
-
-.nav-link:hover, .nav-link.active {
-  color: var(--green-primary);
-}
-
 .nav-link.active::after {
   content: '';
   position: absolute;
@@ -115,7 +115,7 @@ h1, h2, h3, h4 {
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background-color: var(--dark);
+  background-color: white; /* CAMBIADO A BLANCO */
   transition: var(--transition);
 }
 
@@ -841,7 +841,7 @@ h1, h2, h3, h4 {
     left: -100%;
     top: 70px;
     flex-direction: column;
-    background-color: white;
+    background-color: var(--green-primary); /* CAMBIADO A VERDE */
     width: 100%;
     text-align: center;
     transition: 0.3s;
@@ -857,6 +857,7 @@ h1, h2, h3, h4 {
   .nav-link {
     margin: 15px 0;
     justify-content: center;
+    color: white; /* ASEGURAR QUE SEA BLANCO EN MÓVIL */
   }
   
   .hero-title {
